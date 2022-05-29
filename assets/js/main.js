@@ -1,4 +1,4 @@
-console.log("text ⁄ hallo");
+console.log("text hallo");
 
 console.log("hallo Welt".slice(5));
 console.log("hallo Welt".slice(5, 8)); //SLICE Absolute Position
@@ -78,6 +78,51 @@ students[30] = "Batman"               //Gibt leere Elemente an und setzt dann Ba
 console.log(students)
 students.splice(0, 2, "Fluffi")               //Zahlen sind Index SPLICE entfernt und fügt den String hinzu! Starte bei 0
 console.log(students)
+
+let shopping = "Apfel, Banana, Peach"
+console.log(shopping.split(", "))           //Um Werte zu spliten/aufzuteilen, fürs spätere arbeiten als Array
+let shoppingLIST = ["Apfel", "Banane", "Pfirsich"]
+console.log(shoppingLIST.join(", "))                // JOIN von Array zu String mit , dazugelegt
+
+let hello = (name, sprache) => {                     // PARAMETER setzen,zweiten mit , um später im Funktionsaufruf wiedergeben zu können
+    if (sprache === "de") {                          // Das wird ausgegeben WENN - DANN
+        console.log("Sei gegrüßt" + name + "!")
+    }
+    else if (sprache === "en") {
+        console.log("Hi" + name + "!")
+    }
+}
+
+console.log(Math.max(1, 2, 3))                  // drei Parameter vergeben
+
+hello(" Erika", "de")
+hello(" Max", "de")
+hello(" Basti", "en")
+
+let gemüse = (art, farbe = "rot") => {
+    if (farbe === "rot") {
+        console.log(art + " ist " + farbe)
+    }
+    else if (farbe === "orange") {
+        console.log(art + "hat nicht die richtige farbe")
+    }
+}
+gemüse("Tomate")
+gemüse("kürbis", "orange")
+
+const items = [15, 25, 30]
+
+let summe = (liste) => {
+    let s = 0
+    for (let element of liste) {
+        s += element
+    }
+    console.log("liste:", liste)
+    return s
+}
+
+console.log(summe(items));
+
 
 /*console.log("text");
 let num2 = [3, 4, 5, 6, 7, 8];
